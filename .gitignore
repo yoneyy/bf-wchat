@@ -1,0 +1,7 @@
+# Dir
+node_modules
+
+# File
+.DS_Store
+yarn.lock
+yarn-error.log

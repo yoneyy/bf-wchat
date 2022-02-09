@@ -1,0 +1,16 @@
+{
+  "files.associations": {
+    "*.ejs": "html",
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "iosfwd": "cpp",
+    "functional": "cpp",
+    "ratio": "cpp",
+    "system_error": "cpp",
+    "array": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp"
+  }
+}

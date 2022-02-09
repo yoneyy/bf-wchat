@@ -1,0 +1,1 @@
+cmd_Release/obj.target/bf-wchat.node := g++ -o Release/obj.target/bf-wchat.node -shared -pthread -rdynamic -m64  -Wl,-soname=bf-wchat.node -Wl,--start-group Release/obj.target/bf-wchat/wework_chat.o -Wl,--end-group /www/test/wework-chat-cpp/lib/libWeWorkFinanceSdk_C.so

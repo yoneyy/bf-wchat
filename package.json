@@ -1,0 +1,51 @@
+{
+  "name": "bf-wchat",
+  "version": "0.2.0",
+  "description": "Enterprise WeWork chat archive.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "author": "YoneyY <yoneyy@163.com>",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "keywords": [
+    "WeWorkFinanceSdk",
+    "get Chat data"
+  ],
+  "files": [
+    "dist",
+    "build",
+    "include",
+    "lib",
+    "binding.gyp",
+    "README.md",
+    "wework_chat.cpp"
+  ],
+  "scripts": {
+    "build": "node-gyp build",
+    "rebuild": "node-gyp rebuild",
+    "tsbuild": "tsc -p tsconfig.json",
+    "postbuild": "yarn tsbuild",
+    "postrebuild": "yarn tsbuild",
+    "start": "yarn ts-node src/index.ts",
+    "dev": "tsc -p tsconfig.json -w",
+    "prepublishOnly": "node-gyp build",
+    "prebenchmark": "node-gyp build"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.15",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  }
+}
