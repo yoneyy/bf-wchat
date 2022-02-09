@@ -1,6 +1,6 @@
 {
   "name": "bf-wchat",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Enterprise WeWork chat archive.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -8,6 +8,10 @@
   "typings": "dist/index.d.ts",
   "author": "YoneyY <yoneyy@163.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YoneyY/bf-wchat.git"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
