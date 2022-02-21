@@ -1,4 +1,4 @@
-const BFWchat = require('bf-wchat');
+import BFWchat from 'bf-wchat';
 
 // your RSA private key
 const private_key = `

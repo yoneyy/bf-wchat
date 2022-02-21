@@ -2,16 +2,20 @@
  * @Author: Yoney Y (YuTianyuan) 
  * @Date: 2022-02-08 02:44:49 
  * @Last Modified by: YoneyY (YuTianyuan)
- * @Last Modified time: 2022-02-09 00:21:36
+ * @Last Modified time: 2022-02-22 02:03:25
  */
 
 const w = require('bindings')('bf-wchat');
 
-interface WeWorkChatInit {
-  corpid: string;
-  secret: string;
-  private_key: string;
+declare namespace WeWorkChat {
+  interface WeWorkChatInit {
+    corpid: string;
+    secret: string;
+    private_key: string;
+  }
 }
+
+
 
 class WeWorkChat {
 
@@ -19,7 +23,7 @@ class WeWorkChat {
   private secret: string;
   private private_key: string;
 
-  constructor(options: WeWorkChatInit) {
+  constructor(options: WeWorkChat.WeWorkChatInit) {
     if (options.corpid == null) throw new Error('`corpid` must be required!');
     if (options.secret == null) throw new Error('`secret` must be required!');
     if (options.private_key == null) throw new Error('`private_key` must be required!');

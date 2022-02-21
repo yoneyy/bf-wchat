@@ -1,3 +1,5 @@
-import WeWorkChat from './index.js';
+import IWeWorkChat from './index.js';
+
+const WeWorkChat = IWeWorkChat.default;
 
 export default WeWorkChat;

@@ -1,11 +1,10 @@
 {
   "name": "bf-wchat",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Enterprise WeWork chat archive.",
-  "main": "dist/index.js",
+  "main": "index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
-  "typings": "dist/index.d.ts",
   "author": "YoneyY <yoneyy@163.com>",
   "license": "MIT",
   "repository": {
@@ -15,7 +14,7 @@
   "exports": {
     ".": {
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./index.js"
     },
     "./package.json": "./package.json"
   },
@@ -35,7 +34,7 @@
   "scripts": {
     "build": "node-gyp build",
     "rebuild": "node-gyp rebuild",
-    "tsbuild": "tsc -p tsconfig.json",
+    "tsbuild": "node scripts/build.js",
     "postbuild": "yarn tsbuild",
     "postrebuild": "yarn tsbuild",
     "start": "yarn ts-node src/index.ts",

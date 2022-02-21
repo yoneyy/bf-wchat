@@ -1,13 +1,15 @@
-interface WeWorkChatInit {
-    corpid: string;
-    secret: string;
-    private_key: string;
+declare namespace WeWorkChat {
+    interface WeWorkChatInit {
+        corpid: string;
+        secret: string;
+        private_key: string;
+    }
 }
 declare class WeWorkChat {
     private corpid;
     private secret;
     private private_key;
-    constructor(options: WeWorkChatInit);
+    constructor(options: WeWorkChat.WeWorkChatInit);
     /**
      * init
      * @description Initialize WeWork Chat SDK
@@ -58,4 +60,5 @@ declare class WeWorkChat {
      */
     deCryptDatas(encrypt_key: string, encrypt_msg: string): Promise<Record<string, unknown>>;
 }
-export default WeWorkChat;
+
+export = WeWorkChat;

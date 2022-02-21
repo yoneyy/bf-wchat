@@ -3,7 +3,7 @@
  * @Author: Yoney Y (YuTianyuan)
  * @Date: 2022-02-08 02:44:49
  * @Last Modified by: YoneyY (YuTianyuan)
- * @Last Modified time: 2022-02-09 00:21:36
+ * @Last Modified time: 2022-02-22 02:03:25
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const w = require('bindings')('bf-wchat');
