@@ -4,6 +4,17 @@ declare namespace WeWorkChat {
         secret: string;
         private_key: string;
     }
+    interface GetChatDatasReturnMember {
+        errcode: number;
+        errmsg: string;
+        chatdata: Array<{
+            seq: number;
+            msgid: string;
+            publickey_ver: number;
+            encrypt_random_key: string;
+            encrypt_chat_msg: string;
+        }>;
+    }
 }
 declare class WeWorkChat {
     private corpid;
@@ -41,7 +52,7 @@ declare class WeWorkChat {
         proxy?: string;
         passwd?: string;
         timeout: number;
-    }): Promise<Record<string, unknown>>;
+    }): Promise<WeWorkChat.GetChatDatasReturnMember>;
     /**
      * RSA解密
      * @param encrypt_random_key 从`getChatData`数据列表的每个元素中获取 `encrypt_random_key`
