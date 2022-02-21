@@ -12,5 +12,6 @@
     "tuple": "cpp",
     "type_traits": "cpp",
     "utility": "cpp"
-  }
+  },
+  "liveServer.settings.port": 5501
 }

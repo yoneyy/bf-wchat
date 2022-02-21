@@ -2,7 +2,7 @@
  * @Author: Yoney Y (YuTianyuan) 
  * @Date: 2022-02-08 02:44:49 
  * @Last Modified by: YoneyY (YuTianyuan)
- * @Last Modified time: 2022-02-22 02:03:25
+ * @Last Modified time: 2022-02-22 02:43:38
  */
 
 const w = require('bindings')('bf-wchat');
@@ -12,6 +12,18 @@ declare namespace WeWorkChat {
     corpid: string;
     secret: string;
     private_key: string;
+  }
+
+  interface GetChatDatasReturnMember {
+    errcode: number;
+    errmsg: string;
+    chatdata: Array<{
+      seq: number;
+      msgid: string;
+      publickey_ver: number;
+      encrypt_random_key: string;
+      encrypt_chat_msg: string;
+    }>;
   }
 }
 
@@ -69,7 +81,7 @@ class WeWorkChat {
     proxy?: string;
     passwd?: string;
     timeout: number;
-  }): Promise<Record<string, unknown>> {
+  }): Promise<WeWorkChat.GetChatDatasReturnMember> {
     if (params.proxy == null) params.proxy = '';
     if (params.passwd == null) params.passwd = '';
 
