@@ -1,6 +1,6 @@
 {
   "name": "bf-wchat",
-  "version": "0.2.6",
+  "version": "0.2.8",
   "description": "Enterprise WeWork chat archive.",
   "main": "index.js",
   "module": "dist/index.mjs",
@@ -39,7 +39,7 @@
     "postrebuild": "yarn tsbuild",
     "start": "yarn ts-node src/index.ts",
     "dev": "tsc -p tsconfig.json -w",
-    "prepublishOnly": "node-gyp build",
+    "prepublishOnly": "yarn build",
     "prebenchmark": "node-gyp build"
   },
   "dependencies": {
