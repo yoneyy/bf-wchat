@@ -1,6 +1,6 @@
 {
   "name": "bf-wchat",
-  "version": "0.2.3",
+  "version": "0.2.6",
   "description": "Enterprise WeWork chat archive.",
   "main": "index.js",
   "module": "dist/index.mjs",
